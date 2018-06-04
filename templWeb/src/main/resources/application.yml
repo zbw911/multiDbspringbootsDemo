@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    db-c:
+      url:  jdbc:sqlserver://localhost:1433;DatabaseName=cccc
+      username: sa
+      password: 1
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 3600000
+    db-v:
+      url: jdbc:sqlserver://localhost:1433;DatabaseName=aaaa
+      username: sa
+      password: 1
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 3600000
+server:
+  port: 8000
+
+
