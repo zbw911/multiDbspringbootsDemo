@@ -12,37 +12,7 @@ public interface MemberMapper {
             "      ,[NickName]\n" +
             "      ,[Avatar]\n" +
             "      ,[Introduction]\n" +
-            "      ,[Mobile]\n" +
-            "      ,[Email]\n" +
-            "      ,[JoinTime]\n" +
-            "      ,[LastUpdateTime]\n" +
-            "      ,[CreateTime]\n" +
-            "      ,[IsAlonePlay]\n" +
-            "      ,[Status]\n" +
-            "      ,[StatusDes]\n" +
-            "      ,[VcrId]\n" +
-            "      ,[AllowBigFile]\n" +
-            "      ,[IsFromBlog]\n" +
-            "      ,[IsShielded]\n" +
-            "      ,[WechatID]\n" +
-            "      ,[WeekInfluence]\n" +
-            "      ,[CoverImage]\n" +
-            "      ,[InfoLevel]\n" +
-            "      ,[Enabled]\n" +
-            "      ,[Auditor]\n" +
-            "      ,[InfoRecommendLevel]\n" +
-            "      ,[InfoRecommendLevelTime]\n" +
-            "      ,[RelationName]\n" +
-            "      ,[UserLevel]\n" +
-            "      ,[CreditScore]\n" +
-            "      ,[KeepLevelCount]\n" +
-            "      ,[RecommendType]\n" +
-            "      ,[RecommendTime]\n" +
-            "      ,[IsAutoWrite]\n" +
-            "      ,[VType]\n" +
-            "      ,[VDescription]\n" +
-            "      ,[VRemark]\n" +
-            "  FROM [chejiahao].[dbo].[Users]  where UserId = #{id}";
+            "  FROM  [Users]  where UserId = #{id}";
     @Select(sql)
     Member findMemberById(long id);
 
