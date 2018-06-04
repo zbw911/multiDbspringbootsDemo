@@ -1,6 +1,7 @@
 package com.zhangbaowei.multidbtempl.controllers;
 
-import com.zhangbaowei.multidbtempl.dao.VideoInfo;
+
+import com.zhangbaowei.multidbtempl.dto.Vinfo;
 import com.zhangbaowei.multidbtempl.service.VideoDbService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
@@ -23,7 +24,7 @@ public class VController {
 
 
     @RequestMapping(value = "/v", method = RequestMethod.GET)
-    public List<VideoInfo> getUserinfo3(int top) {
+    public List<Vinfo> getUserinfo3(int top) {
         return usersService.GetTopVideo(top);
     }
 

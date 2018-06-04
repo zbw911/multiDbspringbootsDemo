@@ -1,7 +1,7 @@
 package com.zhangbaowei.multidbtempl.service;
 
-import com.zhangbaowei.multidbtempl.dao.VideoInfo;
 import com.zhangbaowei.multidbtempl.dto.Member;
+import com.zhangbaowei.multidbtempl.dto.Vinfo;
 
 import java.util.List;
 
@@ -13,5 +13,5 @@ public interface DemoService {
     String GetUser3(long id);
 
 
-    List<VideoInfo>  GetTopVideo(int top);
+    List<Vinfo> GetTopVideo(int top);
 }

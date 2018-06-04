@@ -24,7 +24,7 @@ public interface AutoVideoMapper {
             "      ,[brandid]\n" +
             "      ,[specid]\n" +
 
-            "  FROM [VideoInfo] order by id desc")
+            "  FROM [Vinfo] order by id desc")
     List<Vinfo> selectTop(int top);
 
 

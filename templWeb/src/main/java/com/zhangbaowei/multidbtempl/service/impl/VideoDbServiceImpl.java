@@ -1,12 +1,12 @@
 package com.zhangbaowei.multidbtempl.service.impl;
 
-import com.zhangbaowei.multidbtempl.dao.VideoInfo;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zhangbaowei.multidbtempl.dto.Users;
+import com.zhangbaowei.multidbtempl.dto.Vinfo;
 import com.zhangbaowei.multidbtempl.mapper.AutoVideoMapper;
 import com.zhangbaowei.multidbtempl.mapper.MemberMapper;
 import com.zhangbaowei.multidbtempl.service.VideoDbService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,7 @@ public class VideoDbServiceImpl implements VideoDbService {
     MemberMapper memberMapper;
 
     @Override
-    public List<VideoInfo> GetTopVideo(int top) {
+    public List<Vinfo> GetTopVideo(int top) {
 
         return autoVideoMapper.selectTop(top);
 
@@ -31,7 +31,7 @@ public class VideoDbServiceImpl implements VideoDbService {
     @Override
     public void GetAll() throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
-        List<VideoInfo> videoInfos = autoVideoMapper.selectTop(1);
+        List<Vinfo> videoInfos = autoVideoMapper.selectTop(1);
 
         System.out.println(mapper.writeValueAsString(videoInfos));
 

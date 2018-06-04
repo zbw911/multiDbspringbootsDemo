@@ -1,11 +1,9 @@
 package com.zhangbaowei.multidbtempl.controllers;
 
-import com.zhangbaowei.multidbtempl.dao.VideoInfo;
+
 import com.zhangbaowei.multidbtempl.dto.Member;
+import com.zhangbaowei.multidbtempl.dto.Vinfo;
 import com.zhangbaowei.multidbtempl.service.DemoService;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +39,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/video", method = RequestMethod.GET)
-    public List<VideoInfo> getUserinfo3(int top) {
+    public List<Vinfo> getUserinfo3(int top) {
         return usersService.GetTopVideo(top);
     }
 
